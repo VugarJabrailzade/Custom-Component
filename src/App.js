@@ -1,33 +1,28 @@
-import { GoBell, GoDatabase } from 'react-icons/go'
-import Button from "./Button"
-
+import Accordion from "./components/Accordion"
 
 function App(){
 
-        return <div>
-            <div>
-                <Button  primary className='mb-5' onclick={handleClick}>
-                    <GoBell/>
-                    Click here!
-                    </Button>
-            </div>
-            <div>
-                <Button  secondary>
-                    <GoDatabase/>
-                    Buy now!
-                    </Button>
-            </div>
-            <div>
-                <Button success  >Lest go!</Button>
-            </div>
-            <div>
-                <Button danger>Discount!</Button>
-            </div>
-            <div>
-                <Button warning>Sale!</Button>
-            </div>
-        </div>
+     const items = [
+        {
+            id: '1',
+            label: 'React oyrenme Kursu nece gedir ?',
+            content: 'Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.'
+        },
+        {
+            id: '2',
+            label: 'React oyrenme Kursu nece gedir ?',
+            content: 'Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.'
+        },
+        {
+            id: '3',
+            label: 'React oyrenme Kursu nece gedir ?',
+            content: 'Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.Kurs diqqet verilmelidir.'
+        }
+     ]       
 
+return  <Accordion items={items}></Accordion>
+    
+    
 }
 
 export default App
