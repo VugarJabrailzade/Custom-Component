@@ -2,10 +2,24 @@ import { useState } from "react"
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 function Accordion({items}){
+    
 
     const[expandedIndex, setExpandedIndex] = useState(-1)
 
     const handleClick = (nextIndex) => {
+
+        // setExpandedIndex((currentExpandedIndex) => {
+        //     if(currentExpandedIndex === expandedIndex){
+        //         return -1;
+        //     }
+        //     else{
+        //         return nextIndex
+        //     }
+        // }) burada ashagidaki kodun daha ikinci varianti. her ikisi ishleyir. 
+        // Lakin bu kod digerine nisbeten bugsizdir
+
+
+
         console.log(nextIndex)
         if(nextIndex === expandedIndex){
             setExpandedIndex(-1)
@@ -14,7 +28,7 @@ function Accordion({items}){
             setExpandedIndex(nextIndex)
         }
     }
-    
+
     const renderedItems = items.map((item, index)=> {
 
         const isExpanded = index === expandedIndex
